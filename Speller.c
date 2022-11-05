@@ -4,7 +4,6 @@
 #include <stdbool.h>
 #define MAX_LINE_LENGTH 1000
 
-<<<<<<< HEAD
 const char* spellChecker(char* myString){
     FILE    *textfile;
     char    line[MAX_LINE_LENGTH];
@@ -25,57 +24,165 @@ const char* spellChecker(char* myString){
     if(textfile == NULL)
         return "Nothing to Compare to";
     while(fgets(line, MAX_LINE_LENGTH, textfile)){
+        if (strcmp(myString,line)){
+            return myString;
+        }
         if(line[0] == 'a'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'b'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[1]=Word;
         }
         else if(line[0] == 'c'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[2]=Word;
         }
         else if(line[0] == 'd'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[3]=Word;
         }
         else if(line[0] == 'e'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[4]=Word;
         }
         else if(line[0] == 'f'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[5]=Word;
         }
-        else if(line[0] == 'g'){
+        else if(line[6] == 'g'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'h'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'i'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'j'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'k'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'l'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'm'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'n'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'o'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'p'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'q'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'r'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 's'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 't'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'u'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'v'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'w'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'x'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
         else if(line[0] == 'y'){
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
         }
-        else{}
+        else{
+            char *currentWord=tolower(line[0]);
+            node *Word=calloc(1,sizeof(Word));
+            *Word=currentWord;
+            HashTable[0]=Word;
+        }
     }
     fclose(textfile);
 }
