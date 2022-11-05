@@ -2,19 +2,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdbool.h>
-#define MAX_LINE_LENGTH 1000
 
-const char* spellChecker(char* myString){
-    FILE    *textfile;
-    char    line[MAX_LINE_LENGTH];
-    textfile = fopen("readme.txt", "r");
-    if(textfile == NULL)
-        return 1;
-    while(fgets(line, MAX_LINE_LENGTH, textfile)){
-        
-    }
-    fclose(textfile);
-=======
 #define MAX_LINE_LENGTH 1000
 
 const char* spellChecker(char* myString){
@@ -30,7 +18,13 @@ const char* spellChecker(char* myString){
         char *currentWord=tolower(line[0]);
         node *Word=calloc(1,sizeof(Word));
         if(line[0] == 'a'){
-            *Word=currentWord;
+            if(HashTable[0] == NULL){
+                HashTable[0] = Word;
+            }
+            else{
+                node *Word = currentWord;
+                char *Holder;
+            }
             HashTable[0]=Word;
         }
         else if(line[0] == 'b'){
@@ -147,10 +141,6 @@ typedef struct node
 node;
 
 node* HashTable[26]; //Table for all alphabets
-
-const char* spellChecker(char* myString){
-    
-}
 
 int main(void){
     printf("%s",spellChecker(""));
