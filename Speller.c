@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <stdbool.h>
 
+<<<<<<< HEAD
 const char* spellChecker(char* myString){
     FILE    *textfile;
     char    line[MAX_LINE_LENGTH];
@@ -16,6 +17,21 @@ const char* spellChecker(char* myString){
     }
     
     fclose(textfile);
+=======
+
+//Word in index of hash table
+typedef struct node
+{
+    char word[25];
+    struct node *next;
+}
+node;
+
+node* HashTable[26]; //Table for all alphabets
+
+const char* spellChecker(char* myString){
+    
+>>>>>>> e9250929422c7631586fcff553ae674864887323
 }
 
 int main(void){
