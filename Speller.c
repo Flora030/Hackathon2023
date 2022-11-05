@@ -2,20 +2,34 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdbool.h>
+<<<<<<< HEAD
 
 #define MAX_LINE_LENGTH 1000
+=======
+#include <ctype.h>
+#define MAX_LINE_LENGTH 1000
+
+//Word in index of hash table
+typedef struct node
+{
+    char word[25];
+    struct node *next;
+}
+node;
+>>>>>>> 970b421a0694cc12647d17e98ddc92fe73f25465
 
 const char* spellChecker(char* myString){
     FILE *textfile;
     char line[MAX_LINE_LENGTH];
     textfile = fopen("readme.txt", "r");
+    node* HashTable[26]; //Table for all alphabets
     if(textfile == NULL)
         return "Nothing to Compare to";
     while(fgets(line, MAX_LINE_LENGTH, textfile)){
         if (strcmp(myString,line)){
             return myString;
         }
-        char *currentWord=tolower(line[0]);
+        char *currentWord=tolower(line);
         node *Word=calloc(1,sizeof(Word));
         if(line[0] == 'a'){
             if(HashTable[0] == NULL){
@@ -132,6 +146,7 @@ const char* spellChecker(char* myString){
     fclose(textfile);
 }
 
+<<<<<<< HEAD
 //Word in index of hash table
 typedef struct node
 {
@@ -142,6 +157,8 @@ node;
 
 node* HashTable[26]; //Table for all alphabets
 
+=======
+>>>>>>> 970b421a0694cc12647d17e98ddc92fe73f25465
 int main(void){
     printf("%s",spellChecker(""));
 }
